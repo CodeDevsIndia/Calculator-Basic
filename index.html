@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="shortcut icon" href="Favicon.png" type="image/png" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Basic Calculator</title>
+    <style type="text/css" media="all">
+    #main{
+      width: 100px;
+      color: white;
+      background: black;
+      border: 2px solid lightskyblue;
+      text-align: right;
+    }
+    .calc_main{
+      text-align: center;
+      position: relative;
+      top: 1000px;
+      transform: scale(6);
+      left: 160%;
+    }
+    .calc input{
+      background: lightskyblue;
+      border: 2px solid lightskyblue;
+    }
+    .calc input:active{
+        background: lightpink;
+        border: 2px solid lightpink;
+      }
+      #delete{
+        margin-left: 4px;
+      }
+      body{
+        background: tomato;
+        width: 40%;
+      }
+      #decimal{
+        padding-left: 8px;
+      }
+    </style>
+  </head>
+<body>
+  <div class="calc_main">
+    
+  <form name="calc" method="get" accept-charset="utf-8" class="calc">
+    <input type="text" name="main" id="main" />
+    <br><br>
+    <input type="button" id="n1" value="1" onclick="main.value += '1'"/>
+    
+    <input type="button" id="n2" value="2" onclick="main.value += '2'"/>
+    
+    <input type="button" id="n3" value="3" onclick="main.value += '3'"/>
+    
+    <input type="button" id="plus" value="+" onclick="main.value += '+'"/>
+    <br><br>
+    <input type="button" id="n4" value="4" onclick="main.value += '4'"/>
+    
+    <input type="button" id="n5" value="5" onclick="main.value += '5'"/>
+    
+    <input type="button" id="n6" value="6" onclick="main.value += '6'"/>
+    
+    <input type="button" id="minus" value="-" onclick="main.value += '-'"/>
+    <br><br>
+    <input type="button" id="n7" value="7" onclick="main.value += '7'"/>
+    
+    <input type="button" id="n8" value="8" onclick="main.value += '8'"/>
+    
+    <input type="button" id="n9" value="9" onclick="main.value += '9'"/>
+    
+    <input type="button" id="multiply" value="*" onclick="main.value += '*'"/>
+    <br><br>
+    <input type="button" id="n0" value="0" onclick="main.value += '0'"/>
+    
+    <input type="button" id="divide" value="/" onclick="main.value += '/'"/>
+    
+    <input type="button" id="power" value="^" onclick="main.value += '**'"/>
+    
+    <input type="button" id="decimal" value="." onclick="main.value += '.'"/>
+    <br><br>
+    <input type="button" id="equal" value="=" onclick="main.value = eval(main.value)"/>
+   
+    <input type="button" id="delete" value="DELETE" onclick="main.value = ''"/>
+  </form>
+  </div>
+</body>
+</html>
